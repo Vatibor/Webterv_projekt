@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    color: #353535;
+    line-height: 1.5;
+    font-family: Noto Sans,sans-serif;
+}
+
+h1{
+    font-family: "Oswald",Arial,Helvetica,sans-serif;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+#content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 0;
+    border: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 1rem;
+}
+
+#register-form .star {
+    color: #b33a3a;
+}
+
+#register-form #login-q {
+    color: #999;
+    margin-bottom: 20px;
+}
+
+#register-form p a {
+    color: #b33a3a;
+    display: table;
+    margin-top: 10px;
+    text-decoration: underline;
+    width: 100%;
+}
+
+
+#register-form #sex{
+    margin: 0.5rem 0;
+}
+#register-form #sex label{
+    padding: 0 1rem 0 0.3rem;
+}
+
+#register-form #sex input{
+    padding-right:0.5rem;
+    transform: scale(1.5);
+    margin-left: 0.3rem;
+}
+
+
+#register-form #general-info input{
+    width: 100%;
+    margin: 0.5rem 0;
+    background-color: #fff;
+    border: 1px solid #e9e7e7;
+    color: #333;
+    display: block;
+    /* font-size: 1.4rem; */
+    height: 38px;
+    padding: 5px 14px;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 0 3px rgb(0 0 0 / 8%) inset;
+
+}
+
+#newsletter, #terms {
+    margin: 0.3rem;
+    transform: scale(1.5);
+}
+
+input[type="submit"]{
+    width: 100%;
+    border-color: #d11837;
+    background-color: #d11837;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 3px;
+    text-transform: capitalize;
+    line-height: 1.5;
+    margin: 0.5rem auto;
+
+}
+
+
+@media only screen and (min-width: 992px){
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    input[type="submit"]{
+        width: 30%;
+    
+    }
+
+    #register-form #sex input{
+        padding-right:0.5rem;
+        transform: none;
+    }
+    #newsletter, #terms {
+        margin: 0.3rem;
+        transform: none;
+    }
+}

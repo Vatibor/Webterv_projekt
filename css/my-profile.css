@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+body {
+    font-size: 1rem;
+    color: #353535;
+    line-height: 1.5;
+    font-family: Noto Sans,sans-serif;
+}
+
+h1{
+    font-family: "Oswald",Arial,Helvetica,sans-serif;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    /* padding: 20px; */
+    background: #fafafa;
+    border-radius: 0;
+    border: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 1rem;
+}
+
+#content .card{
+    padding: 1.5rem;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 4px;
+    background: #FFFFFF;
+    text-align: center;
+}
+
+#content .card a {
+    color: #b33a3a;
+    margin-top: 0.5rem;
+}
+
+#content .card img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+#content .card #regido {
+    font-size: 0.7rem;
+}
+.content-items-left{
+    flex: 30%;
+    
+}
+
+.content-items-right{
+    flex: 70%;
+    margin-top: 1rem;
+}
+
+
+
+#content .content-items-right .card .table-row{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    padding-bottom: 0.7rem;
+    margin-bottom: 0.7rem;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    font-size: 1.2rem;
+    
+}
+
+#content .content-items-right .card .table-row h6{
+    flex: 30%;
+}
+
+#content .content-items-right .card .table-row p{
+    flex: 70%;
+    color: #75757D;
+}
+
+
+
+@media only screen and (min-width: 992px){
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: row;
+        max-width: 800px;
+    }
+
+    .content-items-right {
+        margin-left: 1rem;
+        margin-top: 0;
+    }
+    
+    #content .card img {
+        border-radius: 50%;
+        width: 150px;
+    }
+
+    
+}
+
+@media only screen and (max-width: 600px){
+    #content .content-items-right .card .table-row{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

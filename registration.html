@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/registration.css">
+  <title>Regisztráció</title>
+</head>
+
+<body>
+  <nav>Itt lesz a menü.</nav>
+  <header>
+    <h1>Fiók létrehozása</h1>
+  </header>
+  <section id="content">
+
+    <section id="register-form">
+      <p id="login-q">Van már fiókod?
+        <a href="#">Jelentkezz be!</a>
+      </p>
+
+      <form action="post">
+        <p>Nem: <span class="star">*</span></p>
+        <div id="sex">
+          <input type="radio" id="op1" name="sex" value="m" />
+          <label for="op1">Férfi</label>
+          <input type="radio" id="op2" name="sex" value="f" />
+          <label for="op2">Nő</label>
+          <input type="radio" id="op3" name="sex" value="other" checked />
+          <label for="op3">Egyéb</label>
+        </div>
+
+        <div id="general-info">
+          <label for="lastname">Vezetéknév: <span class="star">*</span></label>
+          <input type="text" id="lastname" name="lastname" placeholder="Minta" required />
+
+          <label for="firstname">Keresztnév: <span class="star">*</span></label>
+          <input type="text" id="firstname" name="firstname" placeholder="Máté" required />
+
+          <label for="email">Email: <span class="star">*</span></label>
+          <input type="email" id="email" name="email" placeholder="minta.mate@email.hu" required />
+
+          <label for="birthdate">Születési idő:</span></label>
+          <input type="text" id="birthdate" name="birthdate" placeholder="éééé. hh. nn." />
+
+          <label for="username">Felhasználónév: <span class="star">*</span></label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="my-passwd">Jelszó: <span class="star">*</span></label>
+          <input type="password" id="my-passwd" name="passwd" required /> <br />
+        </div>
+
+        <div>
+          <input type="checkbox" id="newsletter" name="newsletter">
+          <label for="newsletter">Szeretnék feliratkozni a hírlevélre!</label>
+        </div>
+        <div>
+          <input type="checkbox" id="terms" name="terms">
+          <label for="terms">Elfogadom a felhasználási feltételeket. <span class="star">*</span></label>
+        </div>
+        <input type="submit" value="Regisztráció">
+      </form>
+    </section>
+  </section>
+</body>
+
+</html>
