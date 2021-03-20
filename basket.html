@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalógus</title>
+    <script src="https://kit.fontawesome.com/dd3ea81325.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/commons.css">
+</head>
+<body>
+<div class="main">
+    <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="catalog.html">Katalógus</a></li>
+        <li><a href="my-profile.html">Profilom</a></li>
+        <li><a href="registration.html">Regisztráció</a></li>
+        <li><a href="#">Kijelentkezés</a></li>
+        <!--A fenti sor később $_SESSION tárolása esetén dinamikusan változik bejelentkezésre, ha épp nincs bejelentkezett felhasználó-->
+    </ul>
+    <div id="container">
+        <h1>Kosár tartalma:</h1>
+        <div class="scrollable-y">
+            <table>
+            </table>
+            <h2>- Jelenleg a kosarad üres - </h2>
+        </div>
+    </div>
+    <footer id="contact">
+        <div class="contact-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <div>
+                <h4>Telephely</h4>
+                <p>3211 Páty Bánomkert utca 112/B</p>
+            </div>
+        </div>
+        <div class="contact-card">
+            <i class="fas fa-door-open"></i>
+            <div>
+                <h4>Nyitvatartás</h4>
+                <p>H-P 08-17 | Sz 10-16</p>
+            </div>
+        </div>
+        <div class="contact-card">
+            <i class="fas fa-mobile-alt"></i>
+            <div>
+                <h4>Telefonszám</h4>
+                <p><a href="tel:+4733378901">+47 333 78 901</a></p>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <i class="fas fa-paper-plane"></i>
+            <div>
+                <h4>Írj nekünk</h4>
+                <p><a href="mailto:barberandtattoo@webshop.com">barberandtattoo@webshop.com</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
