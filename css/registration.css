@@ -1,27 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 16px;
+label, p {
+    color: black;
 }
 
-#fixed-logo{
-    position: fixed;
-    width: 70px; 
-    bottom: 0;
-    right: 0;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,0,0,0.2));
-    display: none;
-}
-
-body {
-    font-size: 1rem;
-    color: #353535;
-    line-height: 1.5;
-    font-family: Noto Sans,sans-serif;
-}
-
-h1{
+h1 {
     font-family: "Oswald",Arial,Helvetica,sans-serif;
     text-align: center;
     font-weight: 700;
@@ -32,15 +13,13 @@ h1{
 
 #content {
     max-width: 600px;
-    margin: 0 auto;
     padding: 20px;
     background: #fafafa;
     border-radius: 0;
     border: 1px solid rgba(0,0,0,.125);
-    margin-bottom: 1rem;
 }
 
-#register-form .star {
+.star {
     color: #b33a3a;
 }
 
@@ -57,35 +36,38 @@ h1{
     width: 100%;
 }
 
-
-#register-form #sex{
-    margin: 0.5rem 0;
-}
-#register-form #sex label{
-    padding: 0 1rem 0 0.3rem;
-}
-
-#register-form #sex input{
-    padding-right:0.5rem;
-    transform: scale(1.5);
-    margin-left: 0.3rem;
-}
-
-
-#register-form #general-info input{
-    width: 100%;
+#general-info input {
+    width: 50%;
     margin: 0.5rem 0;
     background-color: #fff;
-    border: 1px solid #e9e7e7;
+    border: 1px solid #999;
     color: #333;
-    display: block;
     /* font-size: 1.4rem; */
-    height: 38px;
-    padding: 5px 14px;
-    width: 100%;
+    padding: 2%;
     border-radius: 3px;
     box-shadow: 0 0 3px rgb(0 0 0 / 8%) inset;
+}
 
+#general-info label {
+    display: inline-block;
+    width: 40%;
+    margin: 0 0;
+    text-align: left;
+}
+
+.approvals {
+    margin: 5% 0;
+    line-height: 220%;
+}
+
+.approvals input {
+    display: inline-block;
+}
+
+input::placeholder {
+    color: #999;
+    font-size: 150%;
+    transform: translateY(5px);
 }
 
 #newsletter, #terms {
@@ -93,8 +75,15 @@ h1{
     transform: scale(1.5);
 }
 
-input[type="submit"]{
-    width: 100%;
+#general-info input[type="radio"] {
+    width: 5%;
+}
+
+#general-info #sex label {
+    width: 15%;
+}
+
+input[type="submit"] {
     border-color: #d11837;
     background-color: #d11837;
     color: #fff;
@@ -103,9 +92,33 @@ input[type="submit"]{
     text-transform: capitalize;
     line-height: 1.5;
     margin: 0.5rem auto;
-
 }
 
+.panel {
+    margin: auto auto;
+    height: 80%;
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 1px 10px 25px black;
+    width: 30%;
+    min-width: 450px;
+    background: #fafafa;
+}
+
+#general-info label:first-child {
+    display: inline-block;
+    width: 30%;
+    margin: 0 2%;
+    text-align: left;
+    float:left;
+}
+
+div#sex {
+    display: inline-block;
+    width: 65%;
+    margin: 0 0;
+    float: right;
+}
 
 @media only screen and (min-width: 992px){
     h1 {
@@ -121,12 +134,9 @@ input[type="submit"]{
         padding-right:0.5rem;
         transform: none;
     }
+
     #newsletter, #terms {
         margin: 0.3rem;
         transform: none;
-    }
-
-    #fixed-logo{
-        display:block;
     }
 }
