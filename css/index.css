@@ -11,25 +11,6 @@
     right: 0;
 }
 
-
-body {
-    /* margin: 0; */
-    font-family: Noto Sans,sans-serif;
-    font-size: 16px;
-    color:honeydew;
-    line-height: 1.5;
-}
-
-#container {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 1)), url('../src/backgroung-image-l.jpg');
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
 #container img {
     width: 20rem;
     margin: 0 auto;
@@ -38,48 +19,6 @@ body {
 
 h1 {
     font-size: 4rem;
-}
-
-.contact-card{
-    width: 500%;
-
-}
-#contact {
-    background-color: black;
-    padding: 1rem;
-}
-
-#contact-details {
-    width: 80%;
-    background-color: #D11837;
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.contact-card{
-    flex: 50%;
-    display: flex;
-    padding:1rem;
-}
-
-.contact-card i{
-    font-size: 2rem;
-    padding: 0 1rem 1rem 1rem; 
-}
-
-.contact-card p {
-    color: #EDA3AF;
-}
-
-.contact-card h4 {
-    text-transform:uppercase;
-}
-
-.contact-card a {
-    text-decoration: none;
-    color: #EDA3AF;
 }
 
 
