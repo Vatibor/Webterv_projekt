@@ -77,6 +77,7 @@ input::placeholder {
 
 #general-info input[type="radio"] {
     width: 5%;
+    transform: scale(1.5);
 }
 
 #general-info #sex label {
@@ -139,4 +140,6 @@ div#sex {
         margin: 0.3rem;
         transform: none;
     }
+
+    
 }
