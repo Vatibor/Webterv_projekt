@@ -5,67 +5,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="src/favicon.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/commons.css">
     <link rel="stylesheet" href="css/my-profile.css">
-    <link rel="icon" type="image/png" href="src/favicon.png" />
     <title>Profilom</title>
 </head>
-
 <body>
-    <img id="fixed-logo" src="src/logo_transparent.png" alt="fixed-logo">
+<div class="main">
+    <ul>
+        <li><a href="index.html">Főoldal</a></li>
+        <li><a href="catalog.html">Katalógus</a></li>
+        <li class="selected"><a class="selected" href="#">Profilom</a></li>
+        <li><a href="registration.html">Regisztráció</a></li>
+        <script src="https://kit.fontawesome.com/dd3ea81325.js" crossorigin="anonymous"></script>
+        <li><a href="#">Kijelentkezés</a></li>
+        <!--A fenti sor később $_SESSION tárolása esetén dinamikusan változik bejelentkezésre, ha épp nincs bejelentkezett felhasználó-->
+    </ul>
 
-
-    <nav>Itt lesz a menü.</nav>
-    <header>
-        <h1>Profilom</h1>
-    </header>
-
-    <section id="content">
-        <div class="content-items-left">
-            <div class="card">
-                <img src="src/avatar7.png" alt="profile-photo">
-                <h4>Minta Máté</h4>
-                <p>Törzsvásárló</p>
-                <p id="regido">Regisztráció ideje: 2019. 03. 14.</p>
-                <div>
-                    <a href="#">Kijelentkezés</a>
+    <div id="container">
+        <div class="panel bordered">
+            <div class="panel left">
+                <img src="src/avatar7.png" alt="profile_picture"/>
+                <p>Minta Máté
+                    <br>
+                    <span class="medium-text">minta.mateo@gmail.com</span><br>
+                    <span class="small-text">Regisztráció ideje: 2021.03.20.</span>
+                </p>
+            </div>
+            <div class="panel right">
+                <div class="data">
+                    <div class="field">Felhasználónév:</div>
+                    <div class="value">mmate123</div>
+                </div>
+                <div class="data">
+                    <div class="field">Születési dátum:</div>
+                    <div class="value"><span class="small-text">(nincs megadva)</span></div>
+                </div>
+                <div class="data">
+                    <div class="field">Telefonszám:</div>
+                    <div class="value"><span class="small-text">(nincs megadva)</span></div>
+                </div>
+                <div class="data">
+                    <div class="field">Nem:</div>
+                    <div class="value">Férfi</div>
+                </div>
+                <div class="data">
+                    <div class="field">Utolsó rendelés:</div>
+                    <div class="value">2020.03.20.</div>
                 </div>
             </div>
         </div>
-        <div class="content-items-right">
-            <div class="card">
-                <div class="table-row">
-                    <h6>Vezetéknév:</h6>
-                    <p>Minta</p>
-                </div>
-                <div class="table-row">
-                    <h6>Keresztnév:</h6>
-                    <p>Máté</p>
-                </div>
-                <div class="table-row">
-                    <h6>Felhasználónév:</h6>
-                    <p>Attila94</p>
-                </div>
-                <div class="table-row">
-                    <h6>Email:</h6>
-                    <p>minta.mate@email.hu</p>
-                </div>
-                <div class="table-row">
-                    <h6>Nem:</h6>
-                    <p>Férfi</p>
-                </div>
-                <div class="table-row">
-                    <h6>Születési idő:</h6>
-                    <p>1994. 02. 06.</p>
-                </div>
+        <div id="secondary-content">
+            <div>
+                <iframe src="https://www.youtube.com/embed/eV-j9l6W8X0" allowfullscreen frameborder="0"></iframe>
             </div>
         </div>
-    </section>
-    <aside id="secondary-content">
-        <!-- width="560" height="315" -->
-        <div>
-            <iframe src="https://www.youtube.com/embed/eV-j9l6W8X0" allowfullscreen frameborder="0"></iframe>
+    </div>
+
+    <footer id="contact">
+        <div class="contact-card">
+            <i class="fas fa-map-marked-alt"></i>
+            <div>
+                <h4>Telephely</h4>
+                <p>3211 Páty Bánomkert utca 112/B</p>
+            </div>
         </div>
-    </aside>
+        <div class="contact-card">
+            <i class="fas fa-door-open"></i>
+            <div>
+                <h4>Nyitvatartás</h4>
+                <p>H-P 08-17 | Sz 10-16</p>
+            </div>
+        </div>
+        <div class="contact-card">
+            <i class="fas fa-mobile-alt"></i>
+            <div>
+                <h4>Telefonszám</h4>
+                <p><a href="tel:+4733378901">+47 333 78 901</a></p>
+            </div>
+        </div>
+
+        <div class="contact-card">
+            <i class="fas fa-paper-plane"></i>
+            <div>
+                <h4>Írj nekünk</h4>
+                <p><a href="mailto:barberandtattoo@webshop.com">barberandtattoo@webshop.com</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
 </body>
 
 </html>
