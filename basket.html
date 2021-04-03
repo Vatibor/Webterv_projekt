@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/commons.css">
 </head>
 <body>
-<div class="main">
+<main class="main">
+    <nav>
     <ul>
         <li><a href="index.html">Főoldal</a></li>
         <li><a href="catalog.html">Katalógus</a></li>
@@ -21,14 +22,15 @@
         <li><a href="#">Kijelentkezés</a></li>
         <!--A fenti sor később $_SESSION tárolása esetén dinamikusan változik bejelentkezésre, ha épp nincs bejelentkezett felhasználó-->
     </ul>
-    <div id="container">
+</nav>
+    <section id="container">
         <h1>Kosár tartalma:</h1>
         <div class="scrollable-y">
             <table>
             </table>
             <h2>- Jelenleg a kosarad üres - </h2>
         </div>
-    </div>
+    </section>
     <footer id="contact">
         <div class="contact-card">
             <i class="fas fa-map-marked-alt"></i>
@@ -60,6 +62,6 @@
             </div>
         </div>
     </footer>
-</div>
+</main>
 </body>
 </html>

@@ -84,7 +84,7 @@ input::placeholder {
     width: 15%;
 }
 
-input[type="submit"] {
+input[type="submit"], input[type="reset"] {
     border-color: #d11837;
     background-color: #d11837;
     color: #fff;

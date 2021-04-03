@@ -13,7 +13,8 @@
     <title>Regisztráció</title>
 </head>
 <body>
-<div class="main">
+<main class="main">
+    <nav>
     <ul>
         <li><a href="index.html">Főoldal</a></li>
         <li><a href="catalog.html">Katalógus</a></li>
@@ -22,7 +23,8 @@
         <li><a href="#">Kijelentkezés</a></li>
         <!--A fenti sor később $_SESSION tárolása esetén dinamikusan változik bejelentkezésre, ha épp nincs bejelentkezett felhasználó-->
     </ul>
-    <div id="container">
+</nav>
+    <section id="container">
         <div class="panel">
             <br>
             <form action="majd_valami_controller.php" method="post">
@@ -69,11 +71,12 @@
                 <p id="login-q">Van már fiókod?
                     <a href="#">Jelentkezz be!</a>
                 </p>
+                <input type="reset" value="Törlés">
                 <input type="submit" value="Regisztráció">
                 <input type="hidden" id="register-date" value="2021.03.20.">
             </form>
         </div>
-    </div>
+    </section>
 
     <footer id="contact">
         <div class="contact-card">
@@ -106,7 +109,7 @@
             </div>
         </div>
     </footer>
-</div>
+</main>
 
 </body>
 </html>
