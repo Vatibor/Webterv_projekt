@@ -14,50 +14,54 @@
 <body>
 <main class="main">
     <nav>
-    <ul>
-        <li><a href="index.html">Főoldal</a></li>
-        <li><a href="catalog.html">Katalógus</a></li>
-        <li><a href="my-profile.html">Profilom</a></li>
-        <li><a href="#">Regisztráció</a></li>
-        <li><a href="#">Kijelentkezés</a></li>
-        <!--A fenti sor később $_SESSION tárolása esetén dinamikusan változik bejelentkezésre, ha épp nincs bejelentkezett felhasználó-->
-    </ul>
-</nav>
+        <ul class="kivalaszt">
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="catalog.html">Katalógus</a></li>
+            <li><a href="my-profile.html">Profilom</a></li>
+            <li><a class="jelenlegi" href="#">Regisztráció</a></li>
+            <li><a href="#">Kijelentkezés</a></li>
+            <!--A fenti sor később $_SESSION tárolása esetén dinamikusan változik bejelentkezésre, ha épp nincs bejelentkezett felhasználó-->
+        </ul>
+    </nav>
     <section id="container">
         <div class="panel">
             <br>
             <form action="majd_valami_controller.php" method="post">
-                <div id="general-info">
-                    <label>Nem: <span class="star">*</span></label>
-                    <div id="sex">
-                        <input type="radio" id="op1" name="sex" value="m"/>
-                        <label for="op1">Férfi</label>
-                        <input type="radio" id="op2" name="sex" value="f"/>
-                        <label for="op2">Nő</label>
-                        <input type="radio" id="op3" name="sex" value="other" checked/>
-                        <label for="op3">Egyéb</label>
+                <fieldset>
+                    <div id="general-info">
+                        <label>Nem: <span class="star">*</span></label>
+                        <div id="sex">
+                            <input type="radio" id="op1" name="sex" value="m"/>
+                            <label for="op1">Férfi</label>
+                            <input type="radio" id="op2" name="sex" value="f"/>
+                            <label for="op2">Nő</label>
+                            <input type="radio" id="op3" name="sex" value="other" checked/>
+                            <label for="op3">Egyéb</label>
+                        </div>
+
+                        <br>
+
+                        <label for="lastname">Vezetéknév: <span class="star">*</span></label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Minta" required/>
+
+                        <label for="firstname">Keresztnév: <span class="star">*</span></label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Máté" required/>
+
+                        <label for="email">Email: <span class="star">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="minta.mate@email.hu" required/>
+
+                        <label for="birthdate">Születési idő:</label>
+                        <input type="text" id="birthdate" name="birthdate" placeholder="éééé. hh. nn."/>
+
+                        <label for="username">Felhasználónév: <span class="star">*</span></label>
+                        <input type="text" id="username" name="username" required/>
+
+                        <label for="my-passwd">Jelszó: <span class="star">*</span></label>
+                        <input type="password" id="my-passwd" name="passwd" required/> <br/>
+                        <label for="my-passwd">Jelszó megerősítése: <span class="star">*</span></label>
+                        <input type="password" id="conf-passwd" name="passwd" required/> <br/>
                     </div>
-                    <br>
-
-                    <label for="lastname">Vezetéknév: <span class="star">*</span></label>
-                    <input type="text" id="lastname" name="lastname" placeholder="Minta" required/>
-
-                    <label for="firstname">Keresztnév: <span class="star">*</span></label>
-                    <input type="text" id="firstname" name="firstname" placeholder="Máté" required/>
-
-                    <label for="email">Email: <span class="star">*</span></label>
-                    <input type="email" id="email" name="email" placeholder="minta.mate@email.hu" required/>
-
-                    <label for="birthdate">Születési idő:</label>
-                    <input type="text" id="birthdate" name="birthdate" placeholder="éééé. hh. nn."/>
-
-                    <label for="username">Felhasználónév: <span class="star">*</span></label>
-                    <input type="text" id="username" name="username" required/>
-
-                    <label for="my-passwd">Jelszó: <span class="star">*</span></label>
-                    <input type="password" id="my-passwd" name="passwd" required/> <br/>
-                </div>
-
+                </fieldset>
                 <div class="approvals">
                     <label for="newsletter">Szeretnék feliratkozni a hírlevélre!</label>
                     <input type="checkbox" id="newsletter" name="newsletter">
@@ -79,21 +83,21 @@
 
     <footer id="contact">
         <div class="contact-card">
-            
+
             <div>
                 <h4>Telephely</h4>
                 <p>3211 Páty Bánomkert utca 112/B</p>
             </div>
         </div>
         <div class="contact-card">
-            
+
             <div>
                 <h4>Nyitvatartás</h4>
                 <p>H-P 08-17 | Sz 10-16</p>
             </div>
         </div>
         <div class="contact-card">
-            
+
             <div>
                 <h4>Telefonszám</h4>
                 <p><a href="tel:+4733378901">+47 333 78 901</a></p>
@@ -101,7 +105,7 @@
         </div>
 
         <div class="contact-card">
-            
+
             <div>
                 <h4>Írj nekünk</h4>
                 <p><a href="mailto:barberandtattoo@webshop.com">barberandtattoo@webshop.com</a></p>
