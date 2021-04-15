@@ -1,5 +1,29 @@
 <?php
 session_start();
+include "kozos.php";
+
+
+if (!isset($_SESSION["user"])) {
+    // ha a felhasználó nincs belépve (azaz a "user" munkamenet-változó értéke nem került korábban beállításra), akkor a login.php-ra navigálunk
+    header("Location: login.php");
+}
+
+$basketitems = loadData("basket_items.txt");
+
+$i_name = "asd";
+$i_type = "asd";
+$i_unit = "asd";
+$i_price = "asd";
+
+
+
+$basketitems[] = ["i_name" => $i_name,
+    "i_type" => $i_type,
+    "i_unit" => $i_unit,
+    "i_price" => $i_price,
+];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +43,9 @@ session_start();
     <section id="container">
         <h1>Kosár tartalma:</h1>
         <div class="scrollable-y">
-            <table>
-            </table>
-            <h2>- Jelenleg a kosarad üres - </h2>
+            <?php
+            echo IsEmptyArray($basketitems);
+            ?>
         </div>
     </section>
     <?php include 'footer.php';?>

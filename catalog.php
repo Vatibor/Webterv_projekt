@@ -1,5 +1,13 @@
 <?php
 session_start();
+include "kozos.php";
+$justaboolean = false;
+
+//foreach ($basketitems as $item)
+$barberitems = loadData("barber_items.txt");
+$tattooitems = loadData("tattoo_items.txt");
+$basketitems = loadData("basket_items.txt");
+
 ?>
 
 <!DOCTYPE html>
@@ -16,164 +24,19 @@ session_start();
 <body>
 <main class="main">
     <?php include 'nav.php';?>
-</nav>
+
 <section id="container">
         <h1>Tetováló kellékek</h1>
         <section class="scrollable-y">
-            <table>
-                <tr>
-                    <td>Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td>Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td>Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name"> Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Inky</td>
-                    <td headers="type">Fekete tinta</td>
-                    <td headers="contain">100 ml</td>
-                    <td headers="price">5500 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-            </table>
+            <?php
+            echo build_table($tattooitems, $justaboolean);
+            ?>
         </section>
         <h1>Fodrászcikkek</h1>
         <section class="scrollable-y">
-            <table>
-                <tr>
-                    <td headers="name">Berber</td>
-                    <td headers="type">Hajvágó olló</td>
-                    <td headers="contain">1 db</td>
-                    <td headers="price">9000 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Berber</td>
-                    <td headers="type">Hajvágó olló</td>
-                    <td headers="contain">1 db</td>
-                    <td headers="price">9000 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Berber</td>
-                    <td headers="type">Hajvágó olló</td>
-                    <td headers="contain">1 db</td>
-                    <td headers="price">9000 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Berber</td>
-                    <td headers="type">Hajvágó olló</td>
-                    <td headers="contain">1 db</td>
-                    <td headers="price">9000 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Berber</td>
-                    <td headers="type">Hajvágó olló</td>
-                    <td headers="contain">1 db</td>
-                    <td headers="price">9000 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Berber</td>
-                    <td headers="type">Hajvágó olló</td>
-                    <td headers="contain">1 db</td>
-                    <td headers="price">9000 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Berber</td>
-                    <td headers="type">Hajvágó olló</td>
-                    <td headers="contain">1 db</td>
-                    <td headers="price">9000 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Berber</td>
-                    <td headers="type">Hajvágó olló</td>
-                    <td headers="contain">1 db</td>
-                    <td headers="price">9000 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-                <tr>
-                    <td headers="name">Berber</td>
-                    <td headers="type">Hajvágó olló</td>
-                    <td headers="contain">1 db</td>
-                    <td headers="price">9000 ft</td>
-                    <td><a href="basket.html">Kosárba!</a></td>
-                </tr>
-            </table>
+            <?php
+            echo build_table($barberitems, $justaboolean);
+            ?>
         </section>
     </section>
 

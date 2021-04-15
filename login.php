@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "kozos.php";              
-$fiokok = loadUsers("users.txt"); 
+$fiokok = loadData("users.txt");
 
 $uzenet = ""; 
 

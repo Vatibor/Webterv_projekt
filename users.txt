@@ -1,0 +1,3 @@
+b:0;
+a:9:{s:3:"sex";s:1:"f";s:8:"lastname";s:3:"asd";s:9:"firstname";s:3:"asd";s:5:"email";s:11:"asd@asd.com";s:3:"tel";s:3:"123";s:8:"username";s:3:"asd";s:6:"passwd";s:9:"Asdasdasd";s:9:"birthdate";s:3:"123";s:7:"regDate";s:10:"2021-04-13";}
+a:9:{s:3:"sex";s:1:"f";s:8:"lastname";s:6:"asdasd";s:9:"firstname";s:6:"asdasd";s:5:"email";s:14:"asdasd@asd.com";s:3:"tel";s:3:"123";s:8:"username";s:5:"asdas";s:6:"passwd";s:11:"Asdasdasdas";s:9:"birthdate";s:3:"123";s:7:"regDate";s:10:"2021-04-13";}

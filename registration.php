@@ -1,7 +1,7 @@
 <?php
 session_start();
 include "kozos.php";              // beágyazzuk a loadUsers() és saveUsers() függvényeket tartalmazó PHP fájlt
-$fiokok = loadUsers("users.txt"); // betöltjük a regisztrált felhasználók adatait, és eltároljuk őket a $fiokok változóban
+$fiokok = loadData("users.txt"); // betöltjük a regisztrált felhasználók adatait, és eltároljuk őket a $fiokok változóban
 
 $siker = FALSE;
 $hibak = [];
@@ -82,7 +82,7 @@ if (isset($_POST["submit"])) {   // ha submit gomb megnyomva
                      "regDate" => $regDate,
     ];
         // elmentjük a kibővített $fiokok tömböt a users.txt fájlba
-        saveUsers("users.txt", $fiokok);
+        saveData("users.txt", $fiokok);
         $siker = TRUE;
     } else {                    // ha voltak hibák, akkor a regisztráció sikertelen
         $siker = FALSE;
@@ -107,7 +107,6 @@ if (isset($_POST["submit"])) {   // ha submit gomb megnyomva
 <body>
 <main class="main">
 <?php include 'nav.php';?>
-</nav>
     <section id="container">
         <div class="panel">
             <br>

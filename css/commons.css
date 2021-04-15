@@ -7,9 +7,11 @@
         display: block;
     }
 }
-.kivalaszt .jelenlegi{
-    background-color: #999999;
+.selected {
+    color: #B33A3A;
+
 }
+
 
 html, body {
     height: 100%;
@@ -48,8 +50,13 @@ li a {
     text-decoration: none;
     display: table-cell;
     vertical-align: middle;
-    color: white;
     margin: auto;
+}
+li:not(.selected) a {
+    color: white;
+}
+li.selected a {
+    color: #B33A3A;
 }
 
 li:last-child {

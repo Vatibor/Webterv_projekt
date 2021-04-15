@@ -1,39 +1,89 @@
 <?php
   // a regisztrált felhasználók fájlból való betöltéséért felelő függvény
 
-  function loadUsers($path) {
-    $users = [];                  // ez a tömb fogja tartalmazni a regisztrált felhasználókat
+  function loadData($path) {
+    $objects = [];                  // ez a tömb fogja tartalmazni a regisztrált felhasználókat
 
     $file = fopen($path, "r");    // fájl megnyitása olvasásra
     if ($file === FALSE)          // hibakezelés
       die("HIBA: A fájl megnyitása nem sikerült!");
 
     while (($line = fgets($file)) !== FALSE) {  // fájl tartalmának beolvasása soronként
-      $user = unserialize($line);  // a sor deszerializálása (visszaalakítása az adott felhasználót reprezentáló asszociatív tömbbé)
-      $users[] = $user;            // a felhasználó hozzáadása a regisztrált felhasználókat tároló tömbhöz
+      $object = unserialize($line);  // a sor deszerializálása (visszaalakítása az adott felhasználót reprezentáló asszociatív tömbbé)
+        $objects[] = $object;            // a felhasználó hozzáadása a regisztrált felhasználókat tároló tömbhöz
     }
 
     fclose($file);
-    return $users;                 // a felhasználókat tároló 2D tömb visszaadása
+    return $objects;                 // a felhasználókat tároló 2D tömb visszaadása
   }
 
   // a regisztrált felhasználók adatait fájlba író függvény
 
-  function saveUsers($path, $users) {
+  function saveData($path, $objects) {
     $file = fopen($path, "w");    // fájl megnyitása írásra
     if ($file === FALSE)          // hibakezelés
       die("HIBA: A fájl megnyitása nem sikerült!");
 
-    foreach($users as $user) {    // végigmegyünk a regisztrált felhasználók tömbjén
-      $serialized_user = serialize($user);      // szerializált formára alakítjuk az adott felhasználót
-      fwrite($file, $serialized_user . "\n");   // a szerializált adatot kiírjuk a kimeneti fájlba
+    foreach($objects as $object) {    // végigmegyünk a regisztrált felhasználók tömbjén
+      $serialized_data = serialize($object);      // szerializált formára alakítjuk az adott felhasználót
+      fwrite($file, $serialized_data . "\n");   // a szerializált adatot kiírjuk a kimeneti fájlba
     }
 
     fclose($file);
   }
 
+  function build_table($array, $isInbasketView){
+    // start table
+    $html = '<table>';
+    // header row
+    $html .= '<tr>';
+    /*foreach($array[0] as $key=>$value){
+        $html .= '<th>' . htmlspecialchars($key) . '</th>';
+    }
+    $html .= '</tr>';
+*/
+    // data rows
+      if($isInbasketView == false)
+      {
+          foreach( $array as $key=>$value){
+              $html .= '<tr>';
+              foreach($value as $key2=>$value2){
+                  $html .= '<td>' . htmlspecialchars($value2) . '</td>';
+              }
+              $html .= '<td> <a href="basket.php">Kosárba!</a> </td>';
+              $html .= '</tr>';
+          }
+          // finish table and return it
+          $html .= '</table>';
+          return $html;
+      }
 
-   // a profilkép feltöltését végző függvény
+      else    {
+          foreach( $array as $key=>$value) {
+              $html .= '<tr>';
+              foreach ($value as $key2 => $value2) {
+                  $html .= '<td>' . htmlspecialchars($value2) . '</td>';
+              }
+              $html .= '</tr>';
+          }
+          // finish table and return it
+          $html .= '</table>';
+          return $html;
+      }
+}
+function IsEmptyArray($array){
+      $html = '<h2>- Jelenleg a kosarad üres - </h2>';
+    if(empty($array)){return $html;}
+    else {
+        $justaboolean = true;
+        echo build_table($array, $justaboolean);
+    }
+}
+function AddToBasket(){
+
+}
+
+// a profilkép feltöltését végző függvény
 
    function uploadProfilePicture($username) {
     global $fajlfeltoltes_hiba;    // ez a változó abban a fájlban található, amiben ezt a függvényt meghívjuk, ezért újradeklaráljuk globálisként

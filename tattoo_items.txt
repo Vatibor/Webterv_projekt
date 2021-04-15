@@ -1,0 +1,8 @@
+a:4:{s:6:"i_name";s:4:"Inky";s:6:"i_type";s:6:"Fekete";s:6:"i_unit";s:5:"100ml";s:7:"i_price";s:6:"5500ft";}
+a:4:{s:6:"i_name";s:4:"Inky";s:6:"i_type";s:6:"Fehér";s:6:"i_unit";s:5:"100ml";s:7:"i_price";s:6:"5500ft";}
+a:4:{s:6:"i_name";s:4:"Inky";s:6:"i_type";s:4:"Kék";s:6:"i_unit";s:5:"100ml";s:7:"i_price";s:6:"5500ft";}
+a:4:{s:6:"i_name";s:4:"Inky";s:6:"i_type";s:5:"Piros";s:6:"i_unit";s:5:"100ml";s:7:"i_price";s:6:"5500ft";}
+a:4:{s:6:"i_name";s:4:"Inky";s:6:"i_type";s:6:"Sárga";s:6:"i_unit";s:5:"100ml";s:7:"i_price";s:6:"5500ft";}
+a:4:{s:6:"i_name";s:4:"Inky";s:6:"i_type";s:7:"Narancs";s:6:"i_unit";s:5:"100ml";s:7:"i_price";s:6:"5500ft";}
+a:4:{s:6:"i_name";s:4:"Inky";s:6:"i_type";s:7:"Szürke";s:6:"i_unit";s:5:"100ml";s:7:"i_price";s:6:"5500ft";}
+a:4:{s:6:"i_name";s:4:"Inky";s:6:"i_type";s:4:"Lila";s:6:"i_unit";s:5:"100ml";s:7:"i_price";s:6:"5500ft";}
