@@ -29,13 +29,13 @@ $basketitems = loadData("basket_items.txt");
         <h1>Tetováló kellékek</h1>
         <section class="scrollable-y">
             <?php
-            echo build_table($tattooitems, $justaboolean);
+            echo build_table_AddBasket($tattooitems, $basketitems);
             ?>
         </section>
         <h1>Fodrászcikkek</h1>
         <section class="scrollable-y">
             <?php
-            echo build_table($barberitems, $justaboolean);
+            echo build_table_AddBasket($barberitems, $basketitems);
             ?>
         </section>
     </section>

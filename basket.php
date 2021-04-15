@@ -10,7 +10,7 @@ if (!isset($_SESSION["user"])) {
 
 $basketitems = loadData("basket_items.txt");
 
-$i_name = "asd";
+/*$i_name = "asd";
 $i_type = "asd";
 $i_unit = "asd";
 $i_price = "asd";
@@ -22,7 +22,7 @@ $basketitems[] = ["i_name" => $i_name,
     "i_unit" => $i_unit,
     "i_price" => $i_price,
 ];
-
+*/
 
 ?>
 

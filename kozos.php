@@ -32,33 +32,17 @@
     fclose($file);
   }
 
-  function build_table($array, $isInbasketView){
+  function build_table($array){
     // start table
     $html = '<table>';
     // header row
     $html .= '<tr>';
-    /*foreach($array[0] as $key=>$value){
-        $html .= '<th>' . htmlspecialchars($key) . '</th>';
-    }
-    $html .= '</tr>';
-*/
+      /* foreach($array[0] as $key=>$value){
+           $html .= '<th>' . htmlspecialchars($key) . '</th>';
+       }
+       $html .= '</tr>';
+   */
     // data rows
-      if($isInbasketView == false)
-      {
-          foreach( $array as $key=>$value){
-              $html .= '<tr>';
-              foreach($value as $key2=>$value2){
-                  $html .= '<td>' . htmlspecialchars($value2) . '</td>';
-              }
-              $html .= '<td> <a href="basket.php">Kosárba!</a> </td>';
-              $html .= '</tr>';
-          }
-          // finish table and return it
-          $html .= '</table>';
-          return $html;
-      }
-
-      else    {
           foreach( $array as $key=>$value) {
               $html .= '<tr>';
               foreach ($value as $key2 => $value2) {
@@ -69,18 +53,33 @@
           // finish table and return it
           $html .= '</table>';
           return $html;
-      }
+
 }
 function IsEmptyArray($array){
       $html = '<h2>- Jelenleg a kosarad üres - </h2>';
     if(empty($array)){return $html;}
     else {
-        $justaboolean = true;
-        echo build_table($array, $justaboolean);
+        echo build_table($array);
     }
 }
-function AddToBasket(){
+function build_table_AddBasket($intotable, $intobasket){
+    // start table
+    $html = '<table>';
+    $html .= '<tr>';
+    foreach( $intotable as $key=>$value){
+        $html .= '<tr>';
+        foreach($value as $key2=>$value2){
+            $html .= '<td>' . htmlspecialchars($value2) . '</td>';
+        }
 
+        //$intobasket[] = [$value];
+        //saveData("basket_items.txt", $intobasket);
+        $html .= '<td> <a href="basket.php">Kosárba!</a> </td>';
+        $html .= '</tr>';
+    }
+    // finish table and return it
+    $html .= '</table>';
+    return $html;
 }
 
 // a profilkép feltöltését végző függvény

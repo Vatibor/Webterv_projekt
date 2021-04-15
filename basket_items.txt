@@ -1,1 +1,0 @@
-a:4:{s:6:"i_name";s:6:"Berber";s:6:"i_type";s:10:"Hajnyíró";s:6:"i_unit";s:3:"2db";s:7:"i_price";s:7:"36000ft";}
